@@ -1,0 +1,1646 @@
+/* ==========================================
+   GUIA DOS CALOUROS - FAU MACKENZIE
+   Identidade visual Anita
+========================================== */
+
+
+/* =========================
+   VARIÁVEIS DE CORES
+========================= */
+
+:root {
+
+    --rosa-claro: #F6DBDD;
+    --rosa-principal: #BB6A81;
+    --rosa-medio: #D9A3AD;
+    --rosa-escuro: #A57078;
+    --rosa-suave: #E7C3C7;
+
+    --branco: #ffffff;
+    --texto: #5c4146;
+
+    --sombra:
+        0 8px 25px rgba(165, 112, 120, 0.15);
+
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    background: var(--rosa-claro);
+    color: var(--texto);
+
+}
+
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+
+.sidebar {
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 280px;
+    height: 100vh;
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--rosa-principal),
+        var(--rosa-escuro)
+    );
+
+    padding: 30px 20px;
+
+    color: white;
+
+    overflow-y: auto;
+
+    box-shadow:
+    5px 0 20px rgba(0,0,0,0.08);
+
+    z-index: 10;
+
+}
+
+
+
+.logo h1 {
+
+    font-size: 24px;
+    line-height: 1.2;
+
+}
+
+
+
+.logo p {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    opacity: .9;
+
+}
+
+
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+
+.pesquisa {
+
+    margin: 30px 0;
+
+}
+
+
+.pesquisa input {
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border-radius: 20px;
+
+    border: none;
+
+    outline: none;
+
+    background: rgba(255,255,255,.9);
+
+    color: var(--texto);
+
+    font-family: inherit;
+
+}
+
+
+
+
+/* =========================
+   MENU
+========================= */
+
+
+nav {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+
+.menu-btn {
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    text-align:left;
+
+    padding:13px 15px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+
+.menu-btn:hover {
+
+    background:
+    rgba(255,255,255,.18);
+
+    transform:translateX(5px);
+
+}
+
+
+
+.menu-btn.active {
+
+    background:white;
+
+    color:var(--rosa-principal);
+
+    font-weight:600;
+
+}
+
+
+
+
+/* =========================
+   RODAPÉ DO MENU
+========================= */
+
+
+.rodape-menu {
+
+    margin-top:40px;
+
+    text-align:center;
+
+    opacity:.85;
+
+}
+
+
+
+.rodape-menu hr {
+
+    border:none;
+
+    border-top:
+    1px solid rgba(255,255,255,.4);
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+
+.content {
+
+    margin-left:280px;
+
+    padding:40px;
+
+    min-height:100vh;
+
+}
+
+
+
+.pagina {
+
+    display:none;
+
+    animation:
+    aparecer .4s ease;
+
+}
+
+
+
+.pagina.ativa {
+
+    display:block;
+
+}
+
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+
+.pagina h1 {
+
+    color:var(--rosa-escuro);
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.subtitulo {
+
+    color:#806067;
+
+    margin-bottom:30px;
+
+}
+/* =========================
+   CARDS
+========================= */
+
+
+.card {
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 25px rgba(165,112,120,0.15);
+
+    border:1px solid rgba(217,163,173,0.35);
+
+    transition:0.3s ease;
+
+}
+
+
+.card:hover {
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(165,112,120,0.25);
+
+}
+
+
+
+.card h2 {
+
+    color:var(--rosa-principal);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card h3 {
+
+    color:var(--rosa-escuro);
+
+    margin-top:20px;
+
+}
+
+
+
+.card p {
+
+    line-height:1.7;
+
+    color:#5f4c52;
+
+}
+
+
+
+
+/* =========================
+   CARDS DE DESTAQUE
+========================= */
+
+
+.destaque {
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        var(--rosa-pastel)
+    );
+
+}
+
+
+
+.aviso-final {
+
+    background:var(--rosa-claro);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    margin-top:30px;
+
+}
+
+
+
+.aviso-final h2 {
+
+    color:var(--rosa-principal);
+
+}
+
+
+
+/* =========================
+   DICAS E ALERTAS
+========================= */
+
+
+.dica {
+
+    background:#F6DBDD;
+
+    border-left:6px solid var(--rosa-principal);
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    margin-top:20px;
+
+    color:#63454d;
+
+}
+
+
+
+.alerta {
+
+    background:#fff0f1;
+
+    border-left:6px solid var(--rosa-escuro);
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    margin-top:20px;
+
+    color:#63454d;
+
+}
+
+
+
+.raiva {
+
+    background:#f4e4e6;
+
+    border-left:6px solid #BB6A81;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    margin-top:20px;
+
+    font-style:italic;
+
+}
+/* =========================
+   ACCORDION
+========================= */
+
+
+.accordion {
+
+    margin-bottom:20px;
+
+}
+
+
+
+.accordion-btn {
+
+    width:100%;
+
+    background:white;
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:left;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:var(--rosa-escuro);
+
+    cursor:pointer;
+
+    box-shadow:0 6px 20px rgba(165,112,120,0.12);
+
+    transition:0.3s ease;
+
+}
+
+
+
+.accordion-btn:hover {
+
+    background:var(--rosa-claro);
+
+    transform:translateX(5px);
+
+}
+
+
+
+.accordion-content {
+
+    background:white;
+
+    border-radius:0 0 18px 18px;
+
+    padding:20px;
+
+    margin-top:-5px;
+
+    display:none;
+
+    border-top:2px solid var(--rosa-pastel);
+
+    color:#5f4c52;
+
+    line-height:1.7;
+
+}
+
+
+
+.accordion-content ul {
+
+    margin-left:20px;
+
+}
+
+
+
+.accordion-content li {
+
+    margin-bottom:8px;
+
+}
+/* =========================
+   TIMELINE
+========================= */
+
+
+.timeline {
+
+    position:relative;
+
+    margin:40px 0;
+
+    padding-left:40px;
+
+}
+
+
+
+.timeline::before {
+
+    content:"";
+
+    position:absolute;
+
+    left:20px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    background:var(--rosa-pastel);
+
+    border-radius:10px;
+
+}
+
+
+
+.timeline-item {
+
+    position:relative;
+
+    margin-bottom:45px;
+
+}
+
+
+
+.timeline-dot {
+
+    position:absolute;
+
+    left:-40px;
+
+    top:10px;
+
+    width:40px;
+
+    height:40px;
+
+    background:var(--rosa-principal);
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    box-shadow:0 5px 15px rgba(187,106,129,0.35);
+
+}
+
+
+
+.timeline-content {
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 8px 25px rgba(165,112,120,0.15);
+
+    transition:0.3s ease;
+
+}
+
+
+
+.timeline-content:hover {
+
+    transform:translateX(8px);
+
+}
+
+
+
+.timeline-content h2 {
+
+    color:var(--rosa-principal);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.timeline-content p {
+
+    color:#5f4c52;
+
+    line-height:1.7;
+
+}
+/* =========================
+   BOTÕES E LINKS
+========================= */
+
+
+.botao-link {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--rosa-principal);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+
+    margin-top:15px;
+
+}
+
+
+
+.botao-link:hover {
+
+    background:var(--rosa-escuro);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(165,112,120,0.3);
+
+}
+
+
+
+.whatsapp {
+
+    background:#BB6A81;
+
+}
+
+
+
+/* =========================
+   BOTÕES DE COPIAR
+========================= */
+
+
+.copiar-btn {
+
+    background:var(--rosa-claro);
+
+    border:none;
+
+    color:var(--rosa-escuro);
+
+    padding:10px 18px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-family:'Poppins', sans-serif;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+
+
+.copiar-btn:hover {
+
+    background:var(--rosa-pastel);
+
+}
+
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+
+.pesquisa {
+
+    margin:25px 15px;
+
+}
+
+
+
+.pesquisa input {
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:13px 18px;
+
+    border:none;
+
+    border-radius:25px;
+
+    outline:none;
+
+    font-family:'Poppins', sans-serif;
+
+    background:white;
+
+    color:#5f4c52;
+
+    box-shadow:0 5px 15px rgba(165,112,120,0.15);
+
+}
+
+
+
+.pesquisa input::placeholder {
+
+    color:#b18b93;
+
+}
+/* =========================
+   CHECKLIST
+========================= */
+
+
+.checklist {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.checklist label {
+
+    background:var(--rosa-claro);
+
+    padding:15px 20px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:#63454d;
+
+    transition:0.3s;
+
+}
+
+
+
+.checklist label:hover {
+
+    transform:translateX(5px);
+
+}
+
+
+
+.checklist input {
+
+    margin-right:12px;
+
+    accent-color:var(--rosa-principal);
+
+}
+
+/* =========================
+   HOME CARDS
+========================= */
+
+
+.grid-home {
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    gap:20px;
+
+    margin:30px 0;
+
+}
+
+
+
+.home-card {
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(165,112,120,0.12);
+
+    transition:0.3s;
+
+}
+
+
+
+.home-card:hover {
+
+    transform:translateY(-7px);
+
+}
+
+
+
+.home-card span {
+
+    font-size:35px;
+
+}
+
+
+
+.home-card h3 {
+
+    color:var(--rosa-principal);
+
+    margin:15px 0 8px;
+
+}
+
+
+
+.home-card p {
+
+    color:#806067;
+
+}
+/* =========================
+   FAVORITOS
+========================= */
+
+
+#listaFavoritos {
+
+    margin-top:20px;
+
+    padding:20px;
+
+    background:var(--rosa-claro);
+
+    border-radius:15px;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+.footer {
+
+    background:var(--rosa-principal);
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+
+}
+
+
+
+.footer small {
+
+    opacity:0.8;
+
+}
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+
+.pagina {
+
+    animation:entrada 0.4s ease;
+
+}
+
+
+
+@keyframes entrada {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+button,
+a {
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+/* =========================
+   CARDS GERAIS
+========================= */
+
+.card {
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 20px rgba(187,106,129,0.12);
+
+    border:1px solid #f2dfe2;
+
+    transition:0.3s;
+
+}
+
+
+.card:hover {
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(187,106,129,0.18);
+
+}
+
+
+
+.card h2 {
+
+    color:var(--rosa-escuro);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card h3 {
+
+    color:#A57078;
+
+    margin-top:20px;
+
+}
+
+
+
+.card p {
+
+    line-height:1.7;
+
+    color:#5f4a50;
+
+}
+
+
+
+
+
+/* =========================
+   CARDS DE DESTAQUE
+========================= */
+
+
+.destaque {
+
+    background:linear-gradient(
+        135deg,
+        #fff5f6,
+        #f6dbdd
+    );
+
+    border-left:6px solid var(--rosa-escuro);
+
+}
+
+
+
+
+
+/* =========================
+   GRID DA HOME
+========================= */
+
+
+.grid-home {
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin:30px 0;
+
+}
+
+
+
+.home-card {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    border:1px solid #efd7db;
+
+    transition:0.3s;
+
+}
+
+
+
+.home-card:hover {
+
+    transform:scale(1.03);
+
+}
+
+
+
+.home-card span {
+
+    font-size:35px;
+
+}
+
+
+
+.home-card h3 {
+
+    color:var(--rosa-escuro);
+
+    margin:10px 0;
+
+}
+
+
+
+.home-card p {
+
+    color:#806067;
+
+}
+
+
+
+
+
+/* =========================
+   AVISOS
+========================= */
+
+
+.dica,
+.alerta,
+.raiva {
+
+    margin-top:20px;
+
+    padding:15px 18px;
+
+    border-radius:15px;
+
+    line-height:1.5;
+
+}
+
+
+
+.dica {
+
+    background:#f6dbdd;
+
+    border-left:5px solid var(--rosa-escuro);
+
+}
+
+
+
+.alerta {
+
+    background:#fff1f2;
+
+    border-left:5px solid #bb6a81;
+
+}
+
+
+
+.raiva {
+
+    background:#f3e4e7;
+
+    border-left:5px solid #a57078;
+
+}
+
+
+
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+
+.botao-link {
+
+    display:inline-block;
+
+    background:var(--rosa-escuro);
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    margin-top:15px;
+
+    transition:0.3s;
+
+}
+
+
+
+.botao-link:hover {
+
+    background:#a57078;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.whatsapp {
+
+    background:#bb6a81;
+
+}
+
+
+
+
+
+/* =========================
+   LISTAS
+========================= */
+
+
+ul,
+ol {
+
+    padding-left:25px;
+
+    color:#5f4a50;
+
+    line-height:1.8;
+
+}
+
+
+li {
+
+    margin-bottom:5px;
+
+}
+/* =========================
+   POPUP DE BOAS-VINDAS
+========================= */
+
+.popup {
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(92,65,70,0.35);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:999;
+
+}
+
+
+
+.popup-box {
+
+    background:white;
+
+    width:min(90%,450px);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    animation:popupEntrada .4s ease;
+
+}
+
+
+
+.popup-box h2 {
+
+    color:var(--rosa-principal);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.popup-box p {
+
+    color:#5f4c52;
+
+    line-height:1.6;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.popup-box button {
+
+    margin-top:15px;
+
+    background:var(--rosa-principal);
+
+    color:white;
+
+    border:none;
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-family:'Poppins';
+
+    font-weight:600;
+
+}
+
+
+
+.popup-box button:hover {
+
+    background:var(--rosa-escuro);
+
+}
+
+
+
+@keyframes popupEntrada {
+
+    from {
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+========================= */
+
+
+#voltarTopo {
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:var(--rosa-principal);
+
+    color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(165,112,120,.3);
+
+    display:none;
+
+    z-index:50;
+
+    transition:.3s;
+
+}
+
+
+
+#voltarTopo:hover {
+
+    transform:translateY(-5px);
+
+    background:var(--rosa-escuro);
+
+}
+
+
+
+/* =========================
+   LOADING
+========================= */
+
+
+#loading {
+
+    position:fixed;
+
+    inset:0;
+
+    background:var(--rosa-claro);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:1000;
+
+}
+
+
+
+.loading-box {
+
+    text-align:center;
+
+    color:var(--rosa-escuro);
+
+}
+
+
+
+.loader {
+
+    width:50px;
+
+    height:50px;
+
+    border:5px solid var(--rosa-suave);
+
+    border-top:5px solid var(--rosa-principal);
+
+    border-radius:50%;
+
+    animation:girar 1s linear infinite;
+
+    margin:auto;
+
+}
+
+
+
+@keyframes girar {
+
+    to {
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+/* =========================
+   TOAST
+========================= */
+
+
+#toast {
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:var(--rosa-principal);
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:30px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+    z-index:2000;
+
+}
+
+
+
+#toast.mostrar {
+
+    opacity:1;
+
+}
+/* =========================
+   DESTAQUE DA PESQUISA
+========================= */
+
+.highlight {
+
+    background:#F6DBDD;
+
+    color:#A57078;
+
+    border-radius:5px;
+
+    padding:2px 4px;
+
+    font-weight:600;
+
+}
+
+
+/* mensagem da pesquisa */
+
+#resultadoPesquisa {
+
+    position:fixed;
+
+    top:20px;
+
+    right:30px;
+
+    background:white;
+
+    color:var(--rosa-escuro);
+
+    padding:15px 25px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(165,112,120,.2);
+
+    display:none;
+
+    z-index:999;
+
+    font-weight:600;
+
+}

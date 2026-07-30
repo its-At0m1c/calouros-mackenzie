@@ -1,0 +1,3081 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guia dos Calouros • FAU Mackenzie</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+                POPUP DE BOAS-VINDAS
+    =========================================== -->
+
+    <div id="popup" class="popup">
+
+        <div class="popup-box">
+
+            <h2>🎀 Bem-vindo(a)!</h2>
+
+            <p>
+
+                Este guia foi criado por uma monitora da FAU
+                para ajudar os calouros a sobreviverem ao primeiro semestre.
+
+            </p>
+
+            <p>
+
+                As informações são baseadas na experiência dos alunos
+                e podem sofrer alterações pela faculdade.
+
+            </p>
+
+            <button id="fecharPopup">
+
+                Entendi 💖
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================
+                MENU LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>
+
+                🎀 Guia dos Calouros
+
+            </h1>
+
+            <p>
+
+                Anita • Monitora de EERC1
+
+            </p>
+
+        </div>
+
+        <!-- PESQUISA -->
+
+        <div class="pesquisa">
+
+            <input
+                type="text"
+                id="barraPesquisa"
+                placeholder="Pesquisar...">
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav>
+
+            <button class="menu-btn active"
+                    onclick="mostrarPagina('inicio')">
+
+                🏠 Início
+
+            </button>
+
+            <button class="menu-btn"
+                    onclick="mostrarPagina('faq')">
+
+                ❓ Dúvidas Frequentes
+
+            </button>
+
+            <button class="menu-btn"
+                    onclick="mostrarPagina('sistemas')">
+
+                💻 Sistemas
+
+            </button>
+
+            <button class="menu-btn"
+                    onclick="mostrarPagina('materiais')">
+
+                📦 Materiais
+
+            </button>
+
+            <button class="menu-btn"
+                    onclick="mostrarPagina('dicas')">
+
+                💡 Dicas da Anita
+
+            </button>
+            <button class="menu-btn"
+                    onclick="mostrarPagina('representantes')">
+
+                👥 Representantes
+            </button>
+
+
+
+            <button class="menu-btn"
+                    onclick="mostrarPagina('primeirasemana')">
+
+                📅 Primeira Semana
+
+            </button>
+
+            <button class="menu-btn"
+                    onclick="mostrarPagina('contatos')">
+
+                📞 Contatos
+
+            </button>
+
+            <button class="menu-btn"
+                    onclick="mostrarPagina('outras')">
+
+                💬 Outras Dúvidas
+
+            </button>
+
+            <button class="menu-btn"
+                    onclick="mostrarPagina('favoritos')">
+
+                ⭐ Favoritos
+
+            </button>
+
+        </nav>
+
+        <div class="rodape-menu">
+
+            <hr>
+
+            <small>
+
+                Guia dos Calouros
+
+                <br>
+
+                Versão 3.0
+
+                <br><br>
+
+                Feito com ❤️
+
+                por Anita
+
+            </small>
+
+        </div>
+
+    </aside>
+
+    <!-- ==========================================
+                CONTEÚDO
+    =========================================== -->
+
+    <main class="content">
+
+        <!-- ======================================
+                    INÍCIO
+        ======================================= -->
+
+        <section id="inicio" class="pagina ativa">
+
+            <div class="hero">
+
+                <img
+                    src="desenvolvimento.png" alt="Site em desenvolvimento">
+
+                <h1>
+
+                    Esse site ainda está em desenvolvimento
+
+                </h1>
+
+                <p>
+
+                    Mas já possui praticamente tudo
+                    que você precisa para sobreviver
+                    ao primeiro semestre da FAU...eu acho 😭
+
+                </p>
+
+            </div>
+
+            <div class="card destaque">
+
+                <h2>
+
+                    💖 Bem-vindo(a)!
+
+                </h2>
+
+                <p>
+
+                    Eu fiz esse guia porque,
+                    quando entrei,
+                    tudo estava espalhado
+                    entre Portal,
+                    Moodle,
+                    EduConnect,
+                    WhatsApp,
+                    professores,
+                    veteranos
+                    e secretaria.
+
+                </p>
+
+                <p>
+
+                    Então resolvi reunir tudo
+                    em um único lugar.
+
+                </p>
+
+            </div>
+
+            <div class="grid-home">
+
+                <div class="home-card">
+
+                    <span>
+
+                        ❓
+
+                    </span>
+
+                    <h3>
+
+                        FAQ
+
+                    </h3>
+
+                    <p>
+
+                        As dúvidas que todo calouro tem.
+
+                    </p>
+
+                </div>
+
+                <div class="home-card">
+
+                    <span>
+
+                        💻
+
+                    </span>
+
+                    <h3>
+
+                        Sistemas
+
+                    </h3>
+
+                    <p>
+
+                        Portal, Moodle e EduConnect.
+
+                    </p>
+
+                </div>
+
+                <div class="home-card">
+
+                    <span>
+
+                        📦
+
+                    </span>
+
+                    <h3>
+
+                        Materiais
+
+                    </h3>
+
+                    <p>
+
+                        Listas, dicas e arquivos.
+
+                    </p>
+
+                </div>
+
+                <div class="home-card">
+
+                    <span>
+
+                        💡
+
+                    </span>
+
+                    <h3>
+
+                        Dicas
+
+                    </h3>
+
+                    <p>
+
+                        Tudo que eu gostaria de ter ouvido.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="aviso-final">
+
+                <h2>
+
+                    ❤️ Um recadinho
+
+                </h2>
+
+                <p>
+
+                    Espero que este guia
+                    deixe o primeiro semestre
+                    de vocês um pouco menos caótico.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================
+                    FAQ
+        ======================================= -->
+
+        <section id="faq" class="pagina">
+
+            <h1>
+
+                ❓ Dúvidas Frequentes
+
+            </h1>
+
+            <p class="subtitulo">
+
+                As perguntas que aparecem praticamente toda semana.
+
+            </p>            <div class="accordion">
+
+                <button class="accordion-btn">
+
+                    📄 Minha matrícula está pendente. Posso assistir às aulas?
+
+                </button>
+
+                <div class="accordion-content">
+
+                    <p>
+
+                        Sim.
+
+                    </p>
+
+                    <p>
+
+                        Principalmente para quem entrou pelo Vestibular 2.0,
+                        é comum a aprovação sair poucos dias antes do início das aulas ou até depois do início
+                    </p>
+
+                    <p>
+
+                        Mesmo que sua matrícula ainda apareça como
+                        <b>"Pendente"</b>,
+                        você pode frequentar normalmente as aulas,
+                        desde que já tenha recebido sua aprovação acadêmica e pagado o boleto.
+
+                    </p>
+
+                    <p>
+
+                        Depois de pagar o boleto,
+                        espere cerca de dois dias úteis.
+
+                    </p>
+
+                    <p>
+
+                        Caso continue pendente,
+                        vá até a Secretaria do Prédio 24
+                        levando o boleto pago
+                        e peça a liberação da sua ingressão.
+
+                    </p>
+
+                    <div class="dica">
+
+                        💡 No boleto pago também aparece seu RA,
+                        que será usado em praticamente todos os sistemas.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion">
+
+                <button class="accordion-btn">
+
+                    🆔 Onde descubro meu RA?
+
+                </button>
+
+                <div class="accordion-content">
+
+                    <p>
+
+                        O RA aparece no boleto da matrícula.
+
+                    </p>
+
+                    <p>
+
+                        Ele funciona praticamente como um CPF dentro do Mackenzie.
+
+                    </p>
+
+                    <ul>
+
+                        <li>Portal do Aluno</li>
+
+                        <li>Moodle</li>
+
+                        <li>EduConnect</li>
+
+                        <li>Requerimentos</li>
+
+                        <li>Financeiro</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="accordion">
+
+                <button class="accordion-btn">
+
+                    🏫 Tem aula de sábado?
+
+                </button>
+
+                <div class="accordion-content">
+
+                    <p>
+
+                        Sim.
+
+                    </p>
+
+                    <p>
+
+                        Sim, já tem aula no primeiro sábado.
+
+                    </p>
+
+                    <p>
+
+                        Sim, vale a pena ir.
+
+                    </p>
+
+                    <p>
+
+                        Geralmente acontece a introdução de conteúdos importantes.
+
+                    </p>
+
+                    <div class="alerta">
+
+                        ⚠️ Às vezes o Portal mostra horário errado.
+
+                        Se aparecer aula à noite,
+                         é erro do sistema de bosta do Mackenzie mesmo e o horario certo provavelmente é 14:00.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion">
+
+                <button class="accordion-btn">
+
+                    🚪 Como descubro minha sala?
+
+                </button>
+
+                <div class="accordion-content">
+
+                    <p>
+
+                        Entre no Portal do Aluno.
+
+                    </p>
+
+                    <p>
+
+                        Vá em:
+
+                    </p>
+
+                    <ul>
+
+                        <li>Matrícula</li>
+
+                        <li>Quadro de Horários</li>
+
+                        <li>Clique em qualquer disciplina</li>
+
+                    </ul>
+
+                    <p>
+
+                        No final do código aparecerá sua sala.
+
+                    </p>
+
+                    <p>
+
+                        Exemplo:
+
+                    </p>
+
+                    <pre>
+
+201813122.000.01E12
+
+                    </pre>
+
+                    <p>
+
+                        Nesse caso,
+                        sua sala seria a <b>E</b>.
+
+                    </p>
+
+                    <div class="dica">
+
+                        💡 Confira mais de uma matéria.
+
+                        No começo do semestre
+                        é normal aparecerem salas diferentes.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion">
+
+                <button class="accordion-btn">
+
+                    🔄 Posso trocar de sala?
+
+                </button>
+
+                <div class="accordion-content">
+
+                    <p>
+
+                        Sim.
+
+                    </p>
+
+                    <p>
+
+                        Basta abrir um requerimento.
+
+                    </p>
+
+                    <p>
+
+                        Porém...
+
+                    </p>
+
+                    <div class="alerta">
+
+                        ⚠️ A chance de aceitarem a troca
+                        no primeiro semestre
+                        é bem pequena.
+
+                    </div>
+
+                    <p>
+
+                        Minha recomendação:
+
+                    </p>
+
+                    <p>
+
+                        Faça novos amigos
+                        e continue encontrando
+                        os antigos no intervalo.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="accordion">
+
+                <button class="accordion-btn">
+
+                    📋 Como contesto faltas?
+
+                </button>
+
+                <div class="accordion-content">
+
+                    <p>
+
+                        Entre no Portal do Aluno.
+
+                    </p>
+
+                    <p>
+
+                        Depois:
+
+                    </p>
+
+                    <ul>
+
+                        <li>Requerimentos</li>
+
+                        <li>Revisão de Faltas</li>
+
+                    </ul>
+
+                    <p>
+
+                        Explique o problema,
+                        anexe documentos se necessário
+                        e aguarde a resposta.
+
+                    </p>
+
+                    <div class="alerta">
+
+                        ⚠️ O prazo é de até 7 dias letivos.
+
+                    </div>
+
+                </div>
+
+            </div>
+             <div class="accordion">
+
+                <button class="accordion-btn">
+
+                    🏥 Sobre atestados médicos
+
+                </button>
+
+                <div class="accordion-content">
+
+            
+                <p>
+
+                    O Mackenzie normalmente aceita apenas
+                    atestados de 5 dias ou mais.
+
+                </p>
+
+                <p>
+
+                    Então se você faltar quatro dias,
+                    infelizmente essas faltas continuam contando.
+
+                </p>
+
+                <div class="raiva">
+
+                    Sim.
+
+                    Também acho um absurdo.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h2>
+
+                    Ainda ficou com dúvida?
+
+                </h2>
+
+                <p>
+
+                    Dá uma olhada nas outras abas.
+
+                </p>
+
+                <p>
+
+                    Se mesmo assim não encontrar,
+                    me chama no WhatsApp.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================
+                    SISTEMAS
+        ======================================= -->
+
+        <section id="sistemas" class="pagina">
+
+            <h1>
+
+                💻 Sistemas do Mackenzie
+
+            </h1>
+
+            <p class="subtitulo">
+
+                Porque colocar tudo em um único sistema era simples demais. 🙃
+
+            </p>            <!-- =========================
+                    PORTAL DO ALUNO
+            ========================== -->
+
+            <div class="card sistema-card">
+
+                <h2>
+
+                    🎓 Portal do Aluno
+
+                </h2>
+
+                <p>
+
+                    Acesse pelo site do Mackenzie,
+                    clicando em <b>Portal do Aluno</b>.
+
+                </p>
+
+                <h3>
+
+                    Primeiro acesso
+
+                </h3>
+
+                <p>
+
+                    <b>Usuário:</b> Seu RA
+
+                </p>
+
+                <p>
+
+                    <b>Senha:</b> Definida no primeiro login.
+
+                </p>
+
+                <a
+                    class="botao-link"
+                    href="https://institutopresbiteriano166326.rm.cloudtotvs.com.br/FrameHTML/web/app/edu/PortalEducacional/#/"
+                    target="_blank">
+
+                    Abrir Portal
+
+                </a>
+
+                <hr>
+
+                <h3>
+
+                    O que dá para fazer?
+
+                </h3>
+
+                <ul>
+
+                    <li>📅 Ver seu quadro de horários.</li>
+
+                    <li>📚 Consultar a grade curricular.</li>
+
+                    <li>📊 Ver notas e frequência.</li>
+
+                    <li>📄 Abrir requerimentos.</li>
+
+                    <li>💳 Consultar boletos.</li>
+
+                    <li>🎫 Solicitar SPTrans.</li>
+
+                    <li>🎓 Solicitar bolsas.</li>
+
+                </ul>
+
+            </div>
+
+            <!-- =========================
+                    MOODLE
+            ========================== -->
+
+            <div class="card sistema-card">
+
+                <h2>
+
+                    📚 Moodle
+
+                </h2>
+
+                <p>
+
+                    Entre pelo site do Mackenzie.
+
+                </p>
+
+                <p>
+
+                    Clique no chapéuzinho no canto superior direito.
+
+                </p>
+
+                <p>
+
+                    Depois:
+
+                </p>
+
+                <ul>
+
+                    <li>AVA / Moodle</li>
+
+                    <li>Graduação Presencial</li>
+
+                    <li>Office365</li>
+
+                </ul>
+             <a
+                    class="botao-link"
+                    href="https://graduacao.mackenzie.br/my/courses.php"
+                    target="_blank">
+
+                    Abrir Moodle
+
+                </a>
+                <h3>
+
+                    Primeiro acesso
+
+                </h3>
+
+                <p>
+
+                    <b>Usuário:</b>
+
+                </p>
+
+                <pre>
+
+RA@mackenzista.com.br
+
+                </pre>
+
+                <p>
+
+                    <b>Senha:</b>
+
+                </p>
+
+                <pre>
+
+Mack@123
+
+                </pre>
+
+                <small>
+
+                    Troque "123" pelos 3 primeiros números do seu CPF.
+
+                </small>
+                
+   
+
+                <hr>
+
+                <h3>
+
+                    Para que serve?
+
+                </h3>
+
+                <ul>
+
+                    <li>📁 Conteúdo das matérias.</li>
+
+                    <li>📤 Entrega de atividades.</li>
+
+                    <li>📖 Livros e textos.</li>
+
+                    <li>📢 Avisos dos professores.</li>
+
+                    <li>👥 Lista dos alunos da turma.</li>
+
+                </ul>
+
+                <div class="alerta">
+
+                    ⚠️ O Moodle às vezes resolve simplesmente parar de funcionar.
+
+                    É normal.
+
+                </div>
+
+            </div>
+
+            <!-- =========================
+                    EDUCONNECT
+            ========================== -->
+
+            <div class="card sistema-card">
+
+                <h2>
+
+                    📱 EduConnect
+
+                </h2>
+
+                <p>
+
+                    O QR Code costuma ser disponibilizado mas é só por o link www.mackenzie.br que ele libera o login
+
+                </p>
+
+                  <a
+                    class="botao-link"
+                    href="https://play.google.com/store/apps/details?id=com.educonnect.totvs&hl=pt_BR"
+                    target="_blank">
+
+                    Baixar Educonnect
+
+                </a>
+
+                <h3>
+
+                    Primeiro acesso
+
+                </h3>
+
+                <p>
+
+                    <b>Usuário:</b> Seu RA
+
+                </p>
+
+                <p>
+
+                    <b>Senha:</b>
+
+                </p>
+
+                <pre>
+
+DDMMAAAA
+
+                </pre>
+
+                <small>
+
+                    Exemplo:
+
+                    30052008
+
+                </small>
+
+                <hr>
+
+                <h3>
+
+                    O que ele faz?
+
+                </h3>
+
+                <ul>
+
+                    <li>✅ Marcar presença(porcamente🤡)</li>
+
+                    <li>📚 Consultar disciplinas(melhor que o moodle).</li>
+
+                    <li>📅 Ver calendário(melhor que o moodle 😩)</li>
+
+                    <li>📢 Na real só serve pra presença 🗣🗣🗣</li>
+
+                </ul>
+
+                <div class="raiva">
+
+                    Sim.
+
+                    O aplicativo é uma bagunça.
+
+                </div>
+
+            </div>
+
+            <!-- =========================
+                    PRESENÇA
+            ========================== -->
+
+            <div class="card">
+
+                <h2>
+
+                    📍 Como funciona a presença?
+
+                </h2>
+
+                <ol>
+
+                    <li>
+
+                        Mesmo quando não houver aula,
+                        normalmente você ainda precisa ir até o prédio da FAU
+                        marcar presença (exceto feriados).
+
+                    </li>
+
+                    <li>
+
+                        Pode marcar em qualquer horário do dia,
+                        desde que esteja dentro da FAU.
+
+                    </li>
+
+                    <li>
+
+                        Se aparecer que você está em
+                        "Chique-Chique - Bahia",
+                        relaxa.
+
+                        Fecha o aplicativo e tenta novamente.
+
+                    </li>
+
+                    <li>
+
+                        Dá para um amigo marcar?
+
+                        Dá.
+
+                        Mas usa isso com responsabilidade.
+
+                    </li>
+
+                </ol>
+
+            </div>
+
+           
+            <div class="card">
+
+                <h2>
+
+                    🤡 Afinal...
+
+                    por que existem três sistemas?
+
+                </h2>
+
+                <p>
+
+                    Excelente pergunta.
+
+                </p>
+
+                <p>
+
+                    Ninguém sabe.
+
+                </p>
+
+                <p>
+
+                    Dava para colocar tudo no Portal do Aluno.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+         <!-- =========================
+         MATERIAIS
+          ========================== -->
+            <section id="materiais" class="pagina">
+                    
+                <h1>
+                    📦 Materiais
+                </h1>
+
+                <p class="subtitulo">
+                    Listas, dicas e arquivos para o primeiro semestre.
+                </p>
+             <div class="card">
+
+                 <h2>
+                 🎨 EERC1 - Estúdio de Expressão, Representação e Cultura I
+                 </h2>
+
+                 <p>
+        Minha matéria favorita do semestre (e sim, eu sou monitora dela então talvez
+        eu seja suspeita 😭).
+    </p>
+
+    <p>
+        É basicamente uma mistura de artes, criatividade, expressão e aquele momento
+        de respirar no meio do caos da FAU.
+    </p>
+
+    <p>
+        É uma matéria muito tranquila e gostosa, até para quem veio de uma área mais
+        de exatas que nem moi. É praticamente um paraíso.
+    </p>
+
+    <div class="botoes">
+
+        <a class="botao-link" href="#" target="_blank">
+            📄 Slides
+        </a>
+
+        <a class="botao-link" href="#" target="_blank">
+            📅 Calendário
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>
+        🏛️ Ateliê Projeto I: Cultura
+    </h2>
+
+    <p>
+        A matéria "mais importante" do semestre (prepare seu coração).
+    </p>
+
+    <p>
+        É onde você começa a entrar de verdade no mundo da arquitetura:
+        desenhos técnicos, projetos e principalmente as famosas maquetes.
+    </p>
+
+    <p>
+        Vai dar trabalho? Vai, pra caralho.
+        E o sistema de entregas vai ser péssimo e muito em cima da hora, não se engane.
+    </p>
+
+    <div class="botoes">
+
+        <a class="botao-link" href="#" target="_blank">
+            📄 Slides
+        </a>
+
+        <a class="botao-link" href="#" target="_blank">
+            📅 Calendário
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>
+        📐 Estabilidade das Construções
+    </h2>
+
+    <p>
+        Física e geometria decidiram aparecer na sua vida universitária. 😭
+    </p>
+
+    <p>
+        Se você veio de exatas, provavelmente vai estar mais tranquilo no começo.
+    </p>
+
+    <p>
+        Se você veio de humanas...
+    </p>
+
+    <div class="alerta">
+        ⚠️ Talvez seja uma boa hora para começar a fazer amizade com a calculadora e com pessoas porque em algum momento você irá esquecer dela pra prova.
+    </div>
+
+    <div class="botoes">
+
+        <a class="botao-link" href="#" target="_blank">
+            📄 Slides
+        </a>
+
+        <a class="botao-link" href="#" target="_blank">
+            📅 Calendário
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>
+        🌆 Estúdio Urbanismo I: Teoria e Cidade
+    </h2>
+
+    <p>
+        A famosa matéria de entender como as cidades funcionam.
+    </p>
+
+    <p>
+        Tem bastante leitura (muita mesmo), mas também tem um trabalho de pesquisa
+        muito divertido porque você começa a olhar a cidade de outro jeito.
+    </p>
+
+    <div class="botoes">
+
+        <a class="botao-link" href="#" target="_blank">
+            📄 Slides
+        </a>
+
+        <a class="botao-link" href="#" target="_blank">
+            📅 Calendário
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>
+        ⚖️ Ética e Cidadania
+    </h2>
+
+    <p>
+        Essa aqui depende MUITO do professor que você pegar. 😭
+    </p>
+
+    <p>
+        Com um professor é praticamente o paraíso.
+    </p>
+
+    <p>
+        Com a outra professora...
+    </p>
+
+    <div class="dica">
+        💡 Prepare-se para desenvolver habilidades de sobrevivência e aprender
+        a ser o próprio Superman.
+    </div>
+
+    <p>
+        Mas no fim foi uma matéria bem divertida (mesmo que eu não entenda nada).
+    </p>
+
+    <div class="botoes">
+
+        <a class="botao-link" href="#" target="_blank">
+            📄 Slides
+        </a>
+
+        <a class="botao-link" href="#" target="_blank">
+            📅 Calendário
+        </a>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <h2>
+        📏 Topografia I: Introdução
+    </h2>
+
+    <p>
+        A famosa matéria do sábado. Sim, ela existe. 😭
+    </p>
+
+    <p>
+        Primeiro: a matéria em si não é impossível.
+    </p>
+
+    <p>
+        O verdadeiro desafio é sobreviver às aulas e manter a sanidade. (1- não ser morto pelas profs, 2- não matar as profs, 3- nao se matar ) 
+    </p>
+
+    <div class="raiva">
+        ⚠️ Conselho de veterana:
+        evite declarar guerra contra as professoras(mesmo se a Kraken te tratar que nem bosta), respire fundo e lembre que
+        no final você é melhor que isso.
+    </div>
+
+    <div class="botoes">
+
+        <a class="botao-link" href="#" target="_blank">
+            📄 Slides
+        </a>
+
+        <a class="botao-link" href="#" target="_blank">
+            📅 Calendário
+        </a>
+
+    </div>
+
+</div>
+
+            <!-- =========================
+                    MATERIAIS GERAIS
+            ========================== -->
+
+            <div class="card">
+
+                <h2>
+
+                    🛒 Onde comprar materiais?
+
+                </h2>
+
+                <ul>
+
+                    <li>
+
+                        Veteranos (melhor opção).
+
+                    </li>
+
+                    <li>
+
+                        Unikits.(@unikits.mack)
+
+                    </li>
+
+                    <li>
+
+                        Comprar em grupo com a sala.
+
+                    </li>
+
+                    <li>
+
+                        Atacadistas.
+
+                    </li>
+
+                    <li>
+
+                        Internet.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    ⭐ Minha maior dica
+
+                </h2>
+
+                <p>
+
+                    NÃO compre uma Régua Paralela nova
+                    por 300 reais.
+
+                </p>
+
+                <p>
+
+                    Compra de veteranos.
+
+                </p>
+
+                <p>
+
+                    Você praticamente só vai usar
+                    nos dois primeiros semestres.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================
+                    DICAS DA ANITA
+        ======================================= -->
+
+        <section id="dicas" class="pagina">
+
+            <h1>
+
+                💡 Dicas da Anita
+
+            </h1>
+
+            <p class="subtitulo">
+
+                Tudo aquilo que eu gostaria que tivessem me contado
+                no primeiro semestre.
+
+            </p>
+
+            <div class="card">
+
+                <h2>
+
+                    📸 Grupo no Instagram
+
+                </h2>
+
+                <p>
+
+                    Criem um grupo logo na primeira semana.
+
+                </p>
+
+                <p>
+
+                    Assim todo mundo consegue seguir todo mundo
+                    usando o botão "Seguir Todos"
+                    e vocês ainda ganham vários seguidores.🔥🔥🔥🔥
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    👥 Representantes
+
+                </h2>
+
+                <p>
+
+                    Escolham quatro representantes.
+
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        1 para cada sala.
+
+                    </li>
+
+                    <li>
+
+                        1 suplente para cada representante.
+
+                    </li>
+
+                </ul>
+
+                <p>
+
+                    Fazer isso sozinho é punk.
+
+                </p>
+
+                <div class="dica">
+
+                    💡 Representantes e suplentes recebem
+                    40 horas complementares.🔥🔥🔥🔥🔥🔥
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    🎉 Aproveitem o começo
+
+                </h2>
+
+                <p>
+
+                    Vão às palestras.
+
+                </p>
+
+                <p>
+
+                    Participem das gincanas.
+
+                </p>
+
+                <p>
+
+                    Conheçam os veteranos.
+
+                </p>
+
+                <p>
+
+                    Aproveitem as festas.
+
+                </p>
+
+                <p>
+
+                    Depois do primeiro mês
+                    todo mundo só pensa em sobreviver ao semestre. 😭
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    ❤️ Pode me chamar
+
+                </h2>
+
+                <p>
+
+                    Fiz esse site justamente
+                    para diminuir as dúvidas mais comuns.
+
+                </p>
+
+                <p>
+
+                    Mas sempre que precisar,
+                    pode me mandar mensagem.
+
+                </p>
+
+                <p>
+
+                    Se eu não souber responder,
+                    corro atrás da coordenação,
+                    secretaria ou professores.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+                    REPRESENTANTES
+        ======================================= -->
+
+        <section id="representantes" class="pagina">
+
+            <h1>
+
+                👥 Dicas para os Representantes
+
+            </h1>
+
+            <p class="subtitulo">
+
+                Ser representante parece simples...
+                até você descobrir que todo mundo vai te chamar ao mesmo tempo pra repetir a mesma duvida que você ja respondeu. 😭
+
+            </p>
+
+
+            <div class="card">
+
+                <h2>
+
+                    📢 Qual é a função do representante?
+
+                </h2>
+
+                <p>
+
+                    O representante é basicamente a ponte
+                    entre a turma, professores e coordenação.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        📚 Passar avisos importantes.
+                    </li>
+
+                    <li>
+                        💬 Reunir dúvidas da sala.
+                    </li>
+
+                    <li>
+                        📅 Avisar mudanças de horário ou atividades.
+                    </li>
+
+                    <li>
+                        📝 Representar problemas coletivos.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+
+                    ⭐ Como escolher bons representantes?
+
+                </h2>
+
+                <p>
+
+                    Não escolham apenas quem fala mais.
+
+                </p>
+
+                <p>
+
+                    O ideal é alguém organizado,
+                    que responde mensagens
+                    e consegue conversar com professores.
+
+                </p>
+
+                <p>
+
+                    Mas no caso vão pedir para vocês escolherem no segundo dia de aula, então não se preocupem muito, julguem a capa mesmo amores💋💖🌹
+                </p>
+
+                <div class="dica">
+
+                    💡 Um representante não precisa resolver tudo sozinho.
+                    Ele só precisa saber para quem encaminhar cada problema.
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+
+                    📱 Organização do grupo da sala
+
+                </h2>
+
+                <p>
+
+                    Algumas coisas que ajudam muito:
+
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        Criar uma Comunidade no Zap com grupos separados apenas para avisos importantes, calendario, discussões e lições.
+
+                    </li>
+
+                    <li>
+
+                        Fixar mensagens importantes.
+
+                    </li>
+
+                    <li>
+
+                        Evitar mandar 200 mensagens quando algo pode ser resumido.
+
+                    </li>
+
+                    <li>
+
+                        Guardar arquivos em uma pasta organizada.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+
+                    🎁 Horas complementares
+
+                </h2>
+
+                <p>
+
+                    Representantes e suplentes recebem horas complementares
+                    pela participação.
+
+                </p>
+
+                <div class="dica">
+
+                    💡 Guardem comprovantes e informações da atividade.
+                    Nunca deixem para correr atrás no último semestre.
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ======================================
+                    PRIMEIRA SEMANA
+        ======================================= -->
+
+        <section id="primeirasemana" class="pagina">
+
+            <h1>
+
+                📅 Minha Primeira Semana
+
+            </h1>
+
+            <p class="subtitulo">
+
+                O guia de sobrevivência para os primeiros dias na FAU.
+
+            </p>
+
+
+
+            <div class="card destaque">
+
+                <h2>
+
+                    💖 Antes de começar
+
+                </h2>
+
+                <p>
+
+                    Respira.
+
+                </p>
+
+                <p>
+
+                    A primeira semana parece uma bagunça,
+                    porque você recebe informação de todos os lados:
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Professores.
+                    </li>
+
+                    <li>
+                        Veteranos.
+                    </li>
+
+                    <li>
+                        Secretaria.
+                    </li>
+
+                    <li>
+                        Sistemas.
+                    </li>
+
+                    <li>
+                        Sua própria turma.
+                    </li>
+
+                </ul>
+
+                <p>
+
+                    É normal não entender tudo de primeira.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- TIMELINE -->
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+
+                        1
+
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <h2>
+
+                            🎒 Primeiro dia
+
+                        </h2>
+
+                        <p>
+
+                            Chegue com antecedência.
+
+                        </p>
+
+                        <p>
+
+                            Aproveite para conhecer:
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+
+                                O prédio da FAU.
+
+                            </li>
+
+                            <li>
+
+                                Banheiros.
+
+                            </li>
+
+                            <li>
+
+                                Biblioteca.
+
+                            </li>
+
+                            <li>
+
+                                Praça de alimentação.
+
+                            </li>
+
+                            <li>
+
+                                Cafézinhos
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+
+                        2
+
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <h2>
+
+                            👋 Conheça sua turma
+
+                        </h2>
+
+                        <p>
+
+                            Essa é uma das partes mais importantes.
+
+                        </p>
+
+                        <p>
+
+                            Você vai passar praticamente todos os dias
+                            com essas pessoas pelos próximos anos.
+
+                        </p>
+
+                        <div class="dica">
+
+                            💡 Não tenha medo de puxar conversa.
+                            Todo mundo está tão perdido quanto você.
+                             E por incrivel que pareça todos tem muita coisa em comum aqui, só não menciona sexualidade, religião e política que ta gg
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+
+                        3
+
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <h2>
+
+                            📚 Primeiras aulas
+
+                        </h2>
+
+                        <p>
+
+                            Os professores normalmente apresentam:
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+
+                                Plano de ensino.
+
+                            </li>
+
+                            <li>
+
+                                Forma de avaliação.
+
+                            </li>
+
+                            <li>
+
+                                Datas importantes.
+
+                            </li>
+
+                            <li>
+
+                                Materiais necessários.
+
+                            </li>
+
+                        </ul>
+
+
+                        <div class="alerta">
+
+                            ⚠️ Anote tudo.
+
+                            Depois da primeira semana
+                            você já vai ter esquecido metade.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+
+                        4
+
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <h2>
+
+                            🗓️ Primeiro sábado
+
+                        </h2>
+
+                        <p>
+
+                            Sim.
+
+                            Você provavelmente vai ter aula no sábado.
+
+                        </p>
+
+                        <p>
+
+                            Eu sei que parece estranho no começo,
+                            mas faz parte da rotina da FAU.
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+
+                                Confira o horário antes de sair.
+
+                            </li>
+
+                            <li>
+
+                                Leve material para anotar.
+
+                            </li>
+
+                            <li>
+
+                                Aproveite para conhecer melhor a turma.
+
+                            </li>
+
+                        </ul>
+
+
+                        <div class="dica">
+
+                            💡 Muitas vezes o sábado possui apresentações,
+                            introduções ou conteúdos importantes.
+
+                            Vale a pena ir.
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+
+                        5
+
+                    </div>
+
+
+                    <div class="timeline-content">
+
+
+                        <h2>
+
+                            ✏️ Primeiros materiais
+
+                        </h2>
+
+
+                        <p>
+
+                            Não saia comprando tudo no primeiro dia.
+
+                        </p>
+
+
+                        <p>
+
+                            Alguns professores ainda vão explicar
+                            exatamente o que será necessário.
+
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+
+                                Espere as listas oficiais.
+
+                            </li>
+
+                            <li>
+
+                                Converse com veteranos.
+
+                            </li>
+
+                            <li>
+
+                                Veja o que seus colegas já possuem.
+
+                            </li>
+
+                            <li>
+
+                                Pesquise antes de comprar.
+
+                            </li>
+
+                        </ul>
+
+
+                        <div class="alerta">
+
+                            ⚠️ Material de arquitetura costuma ser caro.
+
+                            Comprar por impulso pode fazer você gastar dinheiro à toa.
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="timeline-item">
+
+
+                    <div class="timeline-dot">
+
+                        6
+
+                    </div>
+
+
+                    <div class="timeline-content">
+
+
+                        <h2>
+
+                            💻 Organizando sua vida acadêmica
+
+                        </h2>
+
+
+                        <p>
+
+                            A melhor coisa que você pode fazer
+                            no começo do semestre é se organizar.
+
+                        </p>
+
+
+                        <p>
+
+                            Algumas coisas que recomendo:
+
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+
+                                Criar uma pasta para cada disciplina.
+
+                            </li>
+
+                            <li>
+
+                                Salvar todos os PDFs.
+
+                            </li>
+
+                            <li>
+
+                                Organizar datas de entrega.
+
+                            </li>
+
+                            <li>
+
+                                Criar um calendário.
+
+                            </li>
+
+                            <li>
+
+                                Não deixar trabalhos acumularem.
+
+                            </li>
+
+                        </ul>
+
+
+                        <div class="dica">
+
+                            💡 A FAU trabalha com muitos arquivos,
+                            desenhos e referências.
+
+                            Organização salva muito tempo.
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="timeline-item">
+
+
+                    <div class="timeline-dot">
+
+                        7
+
+                    </div>
+
+
+                    <div class="timeline-content">
+
+
+                        <h2>
+
+                            🏛️ Conhecendo a FAU
+
+                        </h2>
+
+
+                        <p>
+
+                            Aproveite os primeiros dias para explorar.
+
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+
+                                Biblioteca.
+
+                            </li>
+
+                            <li>
+
+                                Laboratórios.
+
+                            </li>
+
+                            <li>
+
+                                Salas de projeto.
+
+                            </li>
+
+                            <li>
+
+                                Espaços de convivência.
+
+                            </li>
+
+                            <li>
+
+                                Exposições e eventos.
+
+                            </li>
+
+                        </ul>
+
+
+                        <p>
+
+                            A faculdade vai ser praticamente sua segunda casa,
+                            então conhecer os espaços ajuda muito.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+            <!-- CHECKLIST -->
+
+
+            <div class="card">
+
+
+                <h2>
+
+                    ✅ Checklist da primeira semana
+
+                </h2>
+
+
+                <div class="checklist">
+
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Descobri minha sala.
+
+                    </label>
+
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Entrei no Portal do Aluno.
+
+                    </label>
+
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Acessei o Moodle.
+
+                    </label>
+
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Baixei o EduConnect.
+
+                    </label>
+
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Conheci meus colegas.
+
+                    </label>
+
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Anotei as datas importantes.
+
+                    </label>
+
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Descobri onde comprar materiais.
+
+                    </label>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="card destaque">
+
+
+                <h2>
+
+                    ❤️ Minha maior dica
+
+                </h2>
+
+
+                <p>
+
+                    Não tente entender tudo no primeiro dia.
+
+                </p>
+
+
+                <p>
+
+                    Todo mundo começa perdido.
+
+                    A diferença é que algumas semanas depois
+                    você já vai estar ajudando outro calouro.
+
+                </p>
+
+
+                <p>
+
+                    Aproveita essa fase.
+
+                    O começo é uma das partes mais legais da faculdade.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+                    CONTATOS
+        ======================================= -->
+        <section id="contatos" class="pagina">
+
+<h1>
+📞 Contatos importantes
+</h1>
+
+<p class="subtitulo">
+Quem procurar dependendo do problema.
+</p>
+
+
+<div class="card contato">
+
+<h2>🎓 Coordenação FAU</h2>
+
+<p>
+Para dúvidas sobre disciplinas, professores
+e questões acadêmicas.
+</p>
+
+<p>
+📧 coordenador.au.fau@mackenzie.br
+</p>
+
+<button 
+class="copiar-btn"
+data-email="coordenador.au.fau@mackenzie.br">
+
+📋 Copiar e-mail
+
+</button>
+
+</div>
+
+
+
+<div class="card contato">
+
+<h2>🏛️ Secretaria FAU</h2>
+
+<p>
+Para matrícula, documentos,
+requerimentos e problemas administrativos.
+</p>
+
+<p>
+📧 au.fau@mackenzie.br
+</p>
+
+<button 
+class="copiar-btn"
+data-email="au.fau@mackenzie.br">
+
+📋 Copiar e-mail
+
+</button>
+
+</div>
+
+
+
+<div class="card contato">
+
+<h2>💰 Financeiro</h2>
+
+<p>
+Para boletos, pagamentos
+e assuntos financeiros.
+</p>
+
+<p>
+📧 afa@mackenzie.br
+</p>
+
+<button 
+class="copiar-btn"
+data-email="afa@mackenzie.br">
+
+📋 Copiar e-mail
+
+</button>
+
+</div>
+
+
+
+<div class="card destaque">
+
+<h2>
+💖 Falar com a Anita
+</h2>   
+
+<p>
+Não encontrou sua dúvida?
+Pode me chamar ❤️
+</p>
+
+
+<a 
+class="botao-link whatsapp"
+href="https://wa.me/5511999493005"
+target="_blank">
+
+💬 WhatsApp da Anita
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+        <!-- ======================================
+                    OUTRAS DÚVIDAS
+        ======================================= -->
+
+
+        <section id="outras" class="pagina">
+
+
+            <h1>
+
+                💬 Outras Dúvidas
+
+            </h1>
+
+
+            <p class="subtitulo">
+
+                Perguntas aleatórias que sempre aparecem.
+
+            </p>
+
+
+
+
+
+            <div class="accordion">
+
+
+                <button class="accordion-btn">
+
+                    🍱 Tem lugar para comer?
+
+                </button>
+
+
+                <div class="accordion-content">
+
+
+                    <p>
+
+                        Sim.
+
+                    </p>
+
+
+                    <p>
+
+                        Existem opções dentro e próximas
+                        do campus.
+
+                    </p>
+
+
+                    <p>
+
+                        No começo vale explorar
+                        para descobrir os lugares favoritos.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="accordion">
+
+
+                <button class="accordion-btn">
+
+                    💻 Preciso de notebook no primeiro semestre?
+
+                </button>
+
+
+                <div class="accordion-content">
+
+
+                    <p>
+
+                        Ajuda bastante.
+
+                    </p>
+
+
+                    <p>
+
+                        Principalmente para organização,
+                        pesquisas e alguns trabalhos.
+
+                    </p>
+
+
+                    <p>
+
+                        Mas não significa que você precisa
+                        comprar um computador novo imediatamente.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="accordion">
+
+
+                <button class="accordion-btn">
+
+                    😭 Vou reprovar se perder uma aula?
+
+                </button>
+
+
+                <div class="accordion-content">
+
+
+                    <p>
+
+                        Não.
+
+                    </p>
+
+
+                    <p>
+
+                        Uma falta isolada acontece.
+
+                    </p>
+
+
+                    <p>
+
+                        O importante é acompanhar
+                        presença, trabalhos e avaliações.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="accordion">
+
+
+                <button class="accordion-btn">
+
+                    🤝 Preciso conhecer alguém antes de entrar?
+
+                </button>
+
+
+                <div class="accordion-content">
+
+
+                    <p>
+
+                        Não.
+
+                    </p>
+
+
+                    <p>
+
+                        A maioria das pessoas chega
+                        sem conhecer ninguém.
+
+                    </p>
+
+
+                    <div class="dica">
+
+                        💡 O primeiro semestre é justamente
+                        quando todo mundo faz novas amizades.
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="card">
+
+
+                <h2>
+
+                    Ainda ficou perdido?
+
+                </h2>
+
+
+                <p>
+
+                    Volta para as outras abas.
+
+                </p>
+
+
+                <p>
+
+                    Provavelmente a resposta está em algum lugar daqui. 💖
+
+                </p>
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+        <!-- ======================================
+                    FAVORITOS
+        ======================================= -->
+
+
+        <section id="favoritos" class="pagina">
+
+
+            <h1>
+
+                ⭐ Favoritos
+
+            </h1>
+
+
+            <p class="subtitulo">
+
+                Salve as páginas que você mais usa.
+
+            </p>
+
+
+
+
+
+            <div class="card">
+
+
+                <h2>
+
+                    🌸 Seus favoritos
+
+                </h2>
+
+
+                <p>
+
+                    Essa área será personalizada conforme você
+                    marcar conteúdos importantes.
+
+                </p>
+
+
+                <p>
+
+                    Use o botão ⭐ nas páginas para adicionar aqui.
+
+                </p>
+
+
+                <div id="listaFavoritos">
+
+
+                    <p>
+
+                        Nenhum favorito ainda.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="card">
+
+
+                <h2>
+
+                    💡 Sugestão
+
+                </h2>
+
+
+                <p>
+
+                    Eu recomendo salvar:
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+
+                        💻 Sistemas
+
+                    </li>
+
+                    <li>
+
+                        📦 Materiais
+
+                    </li>
+
+                    <li>
+
+                        📅 Primeira Semana
+
+                    </li>
+
+                    <li>
+
+                        ❓ FAQ
+
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+
+        </section>
+                <!-- ======================================
+                    ELEMENTOS FLUTUANTES
+        ======================================= -->
+
+
+        <!-- BOTÃO VOLTAR AO TOPO -->
+
+        <button id="voltarTopo">
+
+            ↑
+
+        </button>
+
+
+
+
+        <!-- LOADING -->
+
+        <div id="loading">
+
+
+            <div class="loading-box">
+
+
+                <div class="loader"></div>
+
+
+                <p>
+
+                    Carregando guia... 💖
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- TOAST -->
+
+        <div id="toast">
+
+
+            Copiado com sucesso! 📋💖
+
+
+        </div>
+
+
+
+    </main>
+
+
+
+
+
+    <!-- ======================================
+                RODAPÉ
+    ======================================= -->
+
+
+    <footer class="footer">
+
+
+        <p>
+
+            Feito com ❤️ pela Anita — Monitora de Expressão
+
+        </p>
+
+
+        <small>
+
+            Este guia não possui vínculo oficial com o Mackenzie
+            e foi criado para ajudar os calouros.
+
+        </small>
+
+
+    </footer>
+
+
+
+
+
+    <!-- JAVASCRIPT -->
+
+ <div id="resultadoPesquisa"></div>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+
+</html>
