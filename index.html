@@ -20,11 +20,12 @@
 </head>
 
 <body>
-
-    <!-- ==========================================
-                POPUP DE BOAS-VINDAS
-    =========================================== -->
-
+   <button id="menuMobile"
+        class="menu-mobile"
+        onclick="toggleMenu()">
+☰
+</button> 
+    
     <div id="popup" class="popup">
 
         <div class="popup-box">
@@ -59,6 +60,7 @@
                 MENU LATERAL
     =========================================== -->
 
+    
     <aside class="sidebar">
 
         <div class="logo">
@@ -77,16 +79,21 @@
 
         </div>
 
-        <!-- PESQUISA -->
+<!-- =========================
+     PESQUISA
+========================= -->
+<div class="pesquisa">
 
-        <div class="pesquisa">
+    <input
+        type="search"
+        id="barraPesquisa"
+        placeholder="🔎 Pesquisar no guia..."
+        autocomplete="off"
+        spellcheck="false">
 
-            <input
-                type="text"
-                id="barraPesquisa"
-                placeholder="Pesquisar...">
+    <div id="resultadoPesquisa" class="resultado-pesquisa"></div>
 
-        </div>
+</div>
 
         <!-- MENU -->
 

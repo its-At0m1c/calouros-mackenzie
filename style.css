@@ -108,41 +108,6 @@ body {
 
 
 /* =========================
-   PESQUISA
-========================= */
-
-
-.pesquisa {
-
-    margin: 30px 0;
-
-}
-
-
-.pesquisa input {
-
-    width: 100%;
-
-    padding: 12px 15px;
-
-    border-radius: 20px;
-
-    border: none;
-
-    outline: none;
-
-    background: rgba(255,255,255,.9);
-
-    color: var(--texto);
-
-    font-family: inherit;
-
-}
-
-
-
-
-/* =========================
    MENU
 ========================= */
 
@@ -787,51 +752,6 @@ nav {
 }
 
 
-
-/* =========================
-   PESQUISA
-========================= */
-
-
-.pesquisa {
-
-    margin:25px 15px;
-
-}
-
-
-
-.pesquisa input {
-
-    width:100%;
-
-    box-sizing:border-box;
-
-    padding:13px 18px;
-
-    border:none;
-
-    border-radius:25px;
-
-    outline:none;
-
-    font-family:'Poppins', sans-serif;
-
-    background:white;
-
-    color:#5f4c52;
-
-    box-shadow:0 5px 15px rgba(165,112,120,0.15);
-
-}
-
-
-
-.pesquisa input::placeholder {
-
-    color:#b18b93;
-
-}
 /* =========================
    CHECKLIST
 ========================= */
@@ -1599,48 +1519,116 @@ li {
 
 }
 /* =========================
-   DESTAQUE DA PESQUISA
+   PESQUISA
 ========================= */
 
-.highlight {
-
-    background:#F6DBDD;
-
-    color:#A57078;
-
-    border-radius:5px;
-
+.highlight{
+    background:#FFD97A;
+    color:#5c4146;
     padding:2px 4px;
-
+    border-radius:5px;
     font-weight:600;
+    animation:piscarPesquisa .3s ease;
+}
+
+@keyframes piscarPesquisa{
+
+    from{
+        background:#fff4c9;
+    }
+
+    to{
+        background:#FFD97A;
+    }
 
 }
 
+#resultadoPesquisa{
 
-/* mensagem da pesquisa */
+    margin-top:10px;
 
-#resultadoPesquisa {
+    font-size:13px;
 
-    position:fixed;
+    color:white;
 
-    top:20px;
+    opacity:.9;
 
-    right:30px;
+    min-height:18px;
 
-    background:white;
+    transition:.2s;
 
-    color:var(--rosa-escuro);
+}
+/* ==========================================
+   RESPONSIVO CELULAR
+========================================== */
 
-    padding:15px 25px;
-
-    border-radius:20px;
-
-    box-shadow:0 8px 25px rgba(165,112,120,.2);
-
+.menu-mobile{
     display:none;
+}
 
-    z-index:999;
+@media (max-width: 768px){
 
-    font-weight:600;
+    .sidebar{
+    position: fixed;
+    top: 0;
+    left: -290px;
+    width: 280px;
+    height: 100vh;
+    transition: left 0.3s ease;
+}
+
+    .sidebar.aberta{
+        left:0;
+    }
+
+    .content{
+        margin-left:0;
+        padding:80px 20px 20px;
+    }
+
+    .menu-mobile{
+
+        display:flex;
+
+        position:fixed;
+
+        top:15px;
+
+        left:15px;
+
+        width:50px;
+
+        height:50px;
+
+        border:none;
+
+        border-radius:15px;
+
+        background:var(--rosa-principal);
+
+        color:white;
+
+        font-size:28px;
+
+        justify-content:center;
+
+        align-items:center;
+
+        cursor:pointer;
+
+        z-index:999;
+    }
+
+    .grid-home{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .pagina h1{
+
+        font-size:28px;
+
+    }
 
 }
