@@ -79,8 +79,326 @@ function mostrarPagina(id) {
     
 }
 
+/* =========================
+   PESQUISA V3
+========================= */
+
+const barraPesquisa = document.getElementById("barraPesquisa");
+const resultadoPesquisa = document.getElementById("resultadoPesquisa");
+
+let resultadosPesquisa = [];
+let indiceResultadoAtual = 0;
+
+const nomesPaginas = {
+    inicio: "🏠 Início",
+    faq: "❓ Dúvidas Frequentes",
+    sistemas: "💻 Sistemas",
+    materiais: "📦 Materiais",
+    dicas: "💡 Dicas da Anita",
+    representantes: "👥 Representantes",
+    primeirasemana: "📅 Primeira Semana",
+    contatos: "📞 Contatos",
+    outras: "💬 Outras Dúvidas",
+    favoritos: "⭐ Favoritos"
+};
+
+if(barraPesquisa){
+
+    barraPesquisa.addEventListener("input", pesquisarV3);
+
+}
+/* =========================
+   MOTOR DA PESQUISA V3
+========================= */
+
+function pesquisarV3(){
+
+    const termo = barraPesquisa.value
+        .toLowerCase()
+        .trim();
 
 
+    resultadoPesquisa.innerHTML = "";
+
+
+    if(termo.length < 2){
+
+        resultadosPesquisa = [];
+        return;
+
+    }
+
+
+    resultadosPesquisa = [];
+
+
+    const paginas = document.querySelectorAll(".pagina");
+
+
+    paginas.forEach(pagina => {
+
+
+        const textoPagina = pagina.innerText.toLowerCase();
+
+
+        if(textoPagina.includes(termo)){
+
+
+            const inicio = textoPagina.indexOf(termo);
+
+
+            let trecho = pagina.innerText.substring(
+                Math.max(0, inicio - 60),
+                inicio + 120
+            );
+
+
+            resultadosPesquisa.push({
+
+                id: pagina.id,
+
+                nome:
+                nomesPaginas[pagina.id]
+                || pagina.id,
+
+
+                trecho: trecho + "..."
+
+            });
+
+
+        }
+
+
+    });
+
+
+    mostrarResultadosV3();
+
+}
+function mostrarResultadosV3(){
+
+    resultadoPesquisa.innerHTML = "";
+
+
+    if(resultadosPesquisa.length === 0){
+
+        resultadoPesquisa.innerHTML =
+        `
+        <div class="semResultado">
+            Nenhum resultado encontrado 😢
+        </div>
+        `;
+
+        return;
+
+    }
+
+
+
+    resultadosPesquisa.forEach((resultado, index)=>{
+
+
+        const item = document.createElement("div");
+
+        item.className = "itemPesquisa";
+
+
+        item.innerHTML =
+        `
+        <strong>${resultado.nome}</strong>
+
+        <p>${resultado.trecho}</p>
+        `;
+
+
+        item.onclick = ()=>{
+
+            abrirResultadoPesquisa(resultado);
+
+        };
+
+
+        resultadoPesquisa.appendChild(item);
+
+
+    });
+
+
+}
+/* =========================
+   ABRIR RESULTADO PESQUISA V3
+========================= */
+
+function abrirResultadoPesquisa(resultado){
+
+    const pagina = document.getElementById(resultado.id);
+
+
+    if(!pagina)
+        return;
+
+
+    // abre a página encontrada
+    mostrarPagina(resultado.id);
+
+
+
+    // fecha a caixa de resultados
+    resultadoPesquisa.innerHTML = "";
+
+
+
+    // limpa destaques antigos
+    limparDestaquesV3();
+
+
+
+    // destaca o termo pesquisado
+    destacarTextoV3(
+        pagina,
+        barraPesquisa.value.trim()
+    );
+
+
+
+    // leva até a página
+
+    setTimeout(()=>{
+
+
+        pagina.scrollIntoView({
+
+            behavior: "smooth",
+            block: "start"
+
+        });
+
+
+    },200);
+
+
+
+}
+/* =========================
+   LIMPAR DESTAQUES V3
+========================= */
+
+function limparDestaquesV3(){
+
+    document
+    .querySelectorAll(".highlightPesquisa")
+    .forEach(item=>{
+
+
+        const pai = item.parentNode;
+
+
+        pai.replaceChild(
+
+            document.createTextNode(
+                item.textContent
+            ),
+
+            item
+
+        );
+
+
+        pai.normalize();
+
+
+    });
+
+}
+/* =========================
+   DESTACAR TEXTO V3
+========================= */
+
+function destacarTextoV3(elemento, termo){
+
+
+    if(!termo)
+        return;
+
+
+
+    const regex = new RegExp(
+
+        termo.replace(
+            /[.*+?^${}()|[\]\\]/g,
+            "\\$&"
+        ),
+
+        "gi"
+
+    );
+
+
+
+    const textos = [];
+
+
+    const walker =
+    document.createTreeWalker(
+
+        elemento,
+
+        NodeFilter.SHOW_TEXT,
+
+        null,
+
+        false
+
+    );
+
+
+
+    while(walker.nextNode()){
+
+        textos.push(
+            walker.currentNode
+        );
+
+    }
+
+
+
+    textos.forEach(no=>{
+
+
+        if(!regex.test(no.nodeValue))
+            return;
+
+
+
+        const span =
+        document.createElement("span");
+
+
+
+        span.innerHTML =
+        no.nodeValue.replace(
+
+            regex,
+
+            match =>
+            `<mark class="highlightPesquisa">${match}</mark>`
+
+        );
+
+
+
+        no.parentNode.replaceChild(
+            span,
+            no
+        );
+
+
+    });
+
+
+}
 
 
 
@@ -267,166 +585,7 @@ if(voltarTopo){
 
 
 }
-/* =========================
-   PESQUISA INTELIGENTE V2
-========================= */
 
-const barraPesquisa = document.getElementById("barraPesquisa");
-const resultadoPesquisa = document.getElementById("resultadoPesquisa");
-
-if (barraPesquisa) {
-
-    barraPesquisa.addEventListener("input", pesquisar);
-
-}
-
-function pesquisar() {
-
-    limparPesquisa();
-
-    const termo = barraPesquisa.value
-        .trim()
-        .toLowerCase();
-
-    if (termo === "") {
-
-        resultadoPesquisa.textContent = "";
-        return;
-
-    }
-
-    const paginas = document.querySelectorAll(".pagina");
-
-    let totalResultados = 0;
-    let primeiraOcorrencia = null;
-
-    paginas.forEach(pagina => {
-
-        const texto = pagina.innerText.toLowerCase();
-
-        if (!texto.includes(termo))
-            return;
-
-        mostrarPagina(pagina.id);
-
-        const encontrados = destacarTexto(pagina, termo);
-
-        totalResultados += encontrados;
-
-        if (!primeiraOcorrencia) {
-
-            primeiraOcorrencia =
-                pagina.querySelector(".highlight");
-
-        }
-
-    });
-
-    if (totalResultados > 0) {
-
-        resultadoPesquisa.textContent =
-            `${totalResultados} resultado(s) encontrado(s).`;
-
-        if (primeiraOcorrencia) {
-
-            setTimeout(() => {
-
-                primeiraOcorrencia.scrollIntoView({
-
-                    behavior: "smooth",
-                    block: "center"
-
-                });
-
-            }, 250);
-
-        }
-
-    } else {
-
-        resultadoPesquisa.textContent =
-            "Nenhum resultado encontrado.";
-
-    }
-
-}
-
-function destacarTexto(elemento, termo) {
-
-    let encontrados = 0;
-
-    const walker = document.createTreeWalker(
-
-        elemento,
-        NodeFilter.SHOW_TEXT,
-        null,
-        false
-
-    );
-
-    const textos = [];
-
-    while (walker.nextNode()) {
-
-        textos.push(walker.currentNode);
-
-    }
-
-    textos.forEach(no => {
-
-        if (!no.nodeValue.trim())
-            return;
-
-        const regex = new RegExp(
-            termo.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-            "gi"
-        );
-
-        if (!regex.test(no.nodeValue))
-            return;
-
-        encontrados +=
-            (no.nodeValue.match(regex) || []).length;
-
-        const span = document.createElement("span");
-
-        span.innerHTML = no.nodeValue.replace(
-
-            regex,
-
-            match => `<mark class="highlight">${match}</mark>`
-
-        );
-
-        no.parentNode.replaceChild(span, no);
-
-    });
-
-    return encontrados;
-
-}
-
-function limparPesquisa() {
-
-    document
-        .querySelectorAll(".highlight")
-        .forEach(item => {
-
-            const pai = item.parentNode;
-
-            pai.replaceChild(
-
-                document.createTextNode(item.textContent),
-
-                item
-
-            );
-
-            pai.normalize();
-
-        });
-
-}
 
 // =========================
 // MENU MOBILE

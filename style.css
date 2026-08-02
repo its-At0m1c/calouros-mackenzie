@@ -1519,43 +1519,127 @@ li {
 
 }
 /* =========================
-   PESQUISA
+   PESQUISA V3 - VISUAL
 ========================= */
 
-.highlight{
-    background:#FFD97A;
-    color:#5c4146;
-    padding:2px 4px;
+
+.pesquisa {
+
+    position: relative;
+
+}
+
+
+
+#resultadoPesquisa {
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+
+    left: 0;
+
+    width: 100%;
+
+    max-height: 350px;
+
+    overflow-y: auto;
+
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.18);
+
+
+    z-index: 9999;
+
+}
+
+
+
+/* Resultado individual */
+
+.itemPesquisa {
+
+    padding: 15px 18px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    border-bottom:
+    1px solid #f0f0f0;
+
+}
+
+
+
+/* efeito de botão */
+
+.itemPesquisa:hover {
+
+    background:
+    #ffe6f0;
+
+    transform:
+    translateX(5px);
+
+}
+
+
+
+/* título */
+
+.itemPesquisa strong {
+
+    display:block;
+
+    color:
+    #d85b8b;
+
+    font-size:16px;
+
+    margin-bottom:5px;
+
+}
+
+
+
+/* descrição */
+
+.itemPesquisa p {
+
+    margin:0;
+
+    color:#555;
+
+    font-size:14px;
+
+    line-height:1.4;
+
+}
+
+
+
+/* destaque rosa bebê */
+
+.highlightPesquisa {
+
+    background:
+    #ffc9dd;
+
+    color:
+    #9b3d62;
+
     border-radius:5px;
+
+    padding:
+    2px 5px;
+
     font-weight:600;
-    animation:piscarPesquisa .3s ease;
-}
-
-@keyframes piscarPesquisa{
-
-    from{
-        background:#fff4c9;
-    }
-
-    to{
-        background:#FFD97A;
-    }
-
-}
-
-#resultadoPesquisa{
-
-    margin-top:10px;
-
-    font-size:13px;
-
-    color:white;
-
-    opacity:.9;
-
-    min-height:18px;
-
-    transition:.2s;
 
 }
 /* ==========================================
